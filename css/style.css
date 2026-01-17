@@ -7,7 +7,11 @@
 body {
     max-width: 512px;
     min-width: 400px;
+    color: white;
+    font-family: "DM Sans", sans-serif;
+    background-color: #141318;
 }
+
 
 
 .wrapper {
@@ -22,15 +26,13 @@ body {
 
 
         .sidebar {
-            display: flex;
-            flex-direction: column;
+
             max-width: 15%;
-            padding: 1rem;
-            background-color: #141318;
-            gap: 0.5rem;
+            padding: 0 1rem;
             flex-shrink: 0;
 
             .server {
+                margin: 0.75rem 0;
 
                 img {
                     width: 100%;
@@ -44,8 +46,60 @@ body {
 
 
         main {
+            height: 98%;
+            bottom: 0%;
             background-color: #1c1d22;
             flex-grow: 1;
+            padding: 1rem;
+
+            h1 {
+                font-size: larger;
+            }
+
+            .btns {
+                display: flex;
+                justify-content: space-between;
+                margin: 0.5rem 0;
+                gap: 0.5rem;
+
+                div {
+                    background-color: #373a43;
+                    padding: 0.25rem;
+                    font-size: 0.75rem;
+                    
+                }
+
+                /* stilizzo pulsante ricerca */
+                div:first-child {
+                    flex-shrink: 0;
+                    width: 24px;
+                    height: 24px;
+                    border-radius: 2rem;
+                    position: relative;
+
+                    i {
+                        position: absolute;
+                        display: block;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                    }
+                }
+
+                /* stilizzo pulsante aggiungi amici */
+                div:last-child {
+                    flex-grow: 1;
+                    text-align: center;
+                    border-radius: 2rem;
+
+                    span {
+                        font-size: 200;
+                    }
+
+                }
+            }
+
+            
         }
 
     }
