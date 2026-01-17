@@ -18,6 +18,7 @@ body {
     height: 100vh;
     display: flex;
     flex-direction: column;
+    padding-top: 0.5rem;
 
     .central-wrapper {
 
@@ -28,28 +29,50 @@ body {
 
         .sidebar {
 
-            max-width: 15%;
-            padding: 0 1rem;
+            width: 15%;
             flex-shrink: 0;
 
             .server {
-                margin: 0.75rem 0;
+                margin: 0.50rem;
+                text-align: center;
 
                 img {
-                    width: 100%;
+                    width: 80%;
                 }
 
                 img:not(img[src$="logo.webp"]) {
                     border-radius: 50%;
                 }
             }
+
+            /* inserirsco la barra che indica il server attivo */
+            .server:first-child {
+
+                .selection-bar {
+                    background-color: white;
+                    height: 2.75rem;
+                    width: 0.25rem;
+                    border-radius: 0 6px 6px 0;
+                    position: absolute;
+                    top: 2%;
+                    left: 0%;
+
+                }
+            }
+
+            /* Inserisco l'effetto al passaggio del mouse */
+
+            .server:hover {
+                img {
+                    width: 100%;
+                }
+            }
+
         }
 
 
         main {
-            /* come fare per fare in modo da diminuire l'altezza del main? */
-            /* height: 98%; */
-            /* bottom: 0%; */
+            border-top-left-radius: 1rem;
             background-color: #1c1d22;
             flex-grow: 1;
             padding: 1rem;
