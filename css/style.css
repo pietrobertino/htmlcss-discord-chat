@@ -4,3 +4,60 @@
     box-sizing: border-box;
 }
 
+body {
+    max-width: 512px;
+    min-width: 400px;
+}
+
+
+.wrapper {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    .central-wrapper {
+
+        display: flex;
+        flex-grow: 1;
+
+
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            max-width: 15%;
+            padding: 1rem;
+            background-color: #141318;
+            gap: 0.5rem;
+            flex-shrink: 0;
+
+            .server {
+
+                img {
+                    width: 100%;
+                }
+
+                img:not(img[src$="logo.webp"]) {
+                    border-radius: 50%;
+                }
+            }
+        }
+
+
+        main {
+            background-color: #1c1d22;
+            flex-grow: 1;
+        }
+
+    }
+
+
+    footer {
+        height: 10%;
+        background-color: #2d2d35;
+        flex-shrink: 0;
+        bottom: 0%;
+        left: 0%;
+        right: 0%;
+    }
+
+}
