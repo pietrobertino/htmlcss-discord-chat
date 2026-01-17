@@ -24,6 +24,7 @@ body {
         display: flex;
         flex-grow: 1;
 
+        overflow: hidden;
 
         .sidebar {
 
@@ -46,11 +47,15 @@ body {
 
 
         main {
-            height: 98%;
-            bottom: 0%;
+            /* come fare per fare in modo da diminuire l'altezza del main? */
+            /* height: 98%; */
+            /* bottom: 0%; */
             background-color: #1c1d22;
             flex-grow: 1;
             padding: 1rem;
+            display: flex;
+            flex-direction: column;
+
 
             h1 {
                 font-size: larger;
@@ -66,7 +71,7 @@ body {
                     background-color: #373a43;
                     padding: 0.25rem;
                     font-size: 0.75rem;
-                    
+
                 }
 
                 /* stilizzo pulsante ricerca */
@@ -99,7 +104,86 @@ body {
                 }
             }
 
-            
+            .chats {
+                display: flex;
+                flex-direction: column;
+                overflow: auto;
+
+                .chat {
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 1rem;
+                    gap: 0.5rem;
+                    align-items: flex-start;
+                    color: gray;
+                    border-radius: 1rem;
+
+
+                    .chat-image {
+                        position: relative;
+                        width: 35px;
+                        height: 35px;
+
+                        img {
+                            width: 35px;
+                            border-radius: 50%;
+
+                        }
+
+                        .status {
+                            width: 16px;
+                            height: 16px;
+                            border-radius: 50%;
+                            border: #1c1d22 solid 4px;
+                            position: absolute;
+                            top: 100%;
+                            left: 100%;
+                            transform: translate(-75%, -75%);
+
+
+
+                        }
+
+                        .green {
+                            background-color: green;
+                        }
+
+                        .red {
+                            background-color: red;
+                        }
+
+                        .yellow {
+                            background-color: orange;
+                        }
+                    }
+
+
+
+                    .text {
+                        flex-grow: 1;
+
+                        .chat-name {
+                            font-size: smaller;
+                        }
+
+                        .last-message {
+                            font-size: small;
+                        }
+
+                    }
+
+                    .time-past {
+                        font-size: smaller;
+                    }
+                }
+
+                .chat:hover {
+                    background-color: #26262e;
+                    color: white;
+
+                }
+
+            }
         }
 
     }
